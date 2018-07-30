@@ -1,0 +1,6 @@
+cd /
+cd /Users/pangs/dcos/docker
+docker stop helloworld
+docker rm helloworld
+docker build -t hello-world /Users/pangs/dcos/docker
+docker run -d --name helloworld -p 80:80 -v /Users/pangs/dcos/docker/src:/var/www/html hello-world
